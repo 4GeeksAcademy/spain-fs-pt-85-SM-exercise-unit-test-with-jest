@@ -19,11 +19,10 @@ test("One dollar should be 146.26168224299064 yen", function(){
         const expected = 2.56 * 156.5 / 1.07;
         expect(fromDollarToYen(2.56)).toBe(374.429906542056)
     })
-    
-    
-    test("One yen should be 0.005559105431309904 pounds", function(){
-        const {fromYenToPound} = require('./app.js');
-        const pounds = fromYenToPound(23105);
-        const expected = 23105 * 0.87 / 156.5
-        expect(fromYenToPound(23105)).toBe(128.4431309904153)
-    })
+
+test("one yen should be 0.005555 pounds", function(){
+    const {fromYenToPound} = require('./app.js');
+    const pounds = fromYenToPound(2068);
+    const expected = 2068 * 0.87 / 156.5;
+    expect(fromYenToPound(2068)).toBe(11.496230031948881)
+})
